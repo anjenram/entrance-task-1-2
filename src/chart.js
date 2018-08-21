@@ -20,7 +20,7 @@ export function createChart(container, data, isActive) {
 
   const borderColor = getColor(isActive);
   const backgroundColor = getColor(isActive, 0.5);
-
+  
   const chart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -40,7 +40,7 @@ export function createChart(container, data, isActive) {
         },
         scales: {
             xAxes: [{ ticks: { display: false } }],
-            yAxes: [{ ticks: { beginAtZero: true, max: 0 } }]
+            yAxes: [{ ticks: { beginAtZero: true, max: 10 , min:0, stepSize: 2} }]
         }
     }
   });
